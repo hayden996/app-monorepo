@@ -56,7 +56,7 @@ const Mobile: FC<ExplorerViewProps> = ({
   return (
     <Box flex="1">
       <Box flex={1}>{explorerContent}</Box>
-      {!!showExplorerBar && (
+      {/* {!!showExplorerBar && (
         <Box
           w="100%"
           px={6}
@@ -114,7 +114,7 @@ const Mobile: FC<ExplorerViewProps> = ({
             />
           )}
         </Box>
-      )}
+      )} */}
 
       {moreView}
     </Box>

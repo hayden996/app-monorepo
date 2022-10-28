@@ -45,38 +45,10 @@ export interface TabRouteConfig {
 
 export const tabRoutes: TabRouteConfig[] = [
   {
-    name: TabRoutes.Home,
-    component: HomeScreen,
-    tabBarIcon: () => 'CreditCardOutline',
-    translationId: 'form__account',
-    children: [
-      {
-        name: HomeRoutes.ScreenTokenDetail,
-        component: TokenDetail,
-      },
-      {
-        name: HomeRoutes.FullTokenListScreen,
-        component: FullTokenList,
-      },
-    ],
-  },
-  {
-    name: TabRoutes.Swap,
-    component: SwapScreen,
-    tabBarIcon: () => 'ChartSquareLineOutline',
-    translationId: 'title__swap',
-    children: [
-      {
-        name: HomeRoutes.SwapHistory,
-        component: SwapHistory,
-      },
-    ],
-  },
-  {
-    name: TabRoutes.Discover,
+    name: TabRoutes.Profile,
     component: DiscoverScreen,
     tabBarIcon: () => 'CompassOutline',
-    translationId: 'title__explore',
+    translationId: 'app__app_name',
     children: [
       {
         name: HomeRoutes.ExploreScreen,
@@ -93,55 +65,83 @@ export const tabRoutes: TabRouteConfig[] = [
     ],
   },
   {
-    name: TabRoutes.Me,
+    name: TabRoutes.Swap,
+    component: SwapScreen,
+    tabBarIcon: () => 'ChartSquareLineOutline',
+    translationId: 'title__swap',
+    children: [
+      {
+        name: HomeRoutes.SwapHistory,
+        component: SwapHistory,
+      },
+    ],
+  },
+  {
+    name: TabRoutes.Souffl3,
+    component: HomeScreen,
+    tabBarIcon: () => 'CreditCardOutline',
+    translationId: 'form__account',
+    children: [
+      {
+        name: HomeRoutes.ScreenTokenDetail,
+        component: TokenDetail,
+      },
+      {
+        name: HomeRoutes.FullTokenListScreen,
+        component: FullTokenList,
+      },
+    ],
+  },
+  {
+    name: TabRoutes.More,
     component: MeScreen,
     tabBarIcon: () => 'MenuOutline',
     translationId: 'title__menu',
     children: [
-      {
-        name: HomeRoutes.ScreenOnekeyLiteDetail,
-        component: OnekeyLiteDetail,
-      },
-      {
-        name: HomeRoutes.Protected,
-        component: Protected,
-      },
-      {
-        name: HomeRoutes.AddressBook,
-        component: AddressBook,
-      },
-      {
-        name: HomeRoutes.VolumeHaptic,
-        component: VolumeHaptic,
-      },
-      {
-        name: HomeRoutes.SettingsWebviewScreen,
-        component: Webview,
-      },
-      {
-        name: HomeRoutes.CloudBackup,
-        component: CloudBackup,
-      },
-      {
-        name: HomeRoutes.CloudBackupPreviousBackups,
-        component: CloudBackupPreviousBackups,
-      },
-      {
-        name: HomeRoutes.CloudBackupDetails,
-        component: CloudBackupDetails,
-      },
-      {
-        name: HomeRoutes.PushNotification,
-        component: PushNotification,
-      },
-      {
-        name: HomeRoutes.PushNotificationManagePriceAlert,
-        component: PushNotificationManagePriceAlert,
-      },
-      {
-        name: HomeRoutes.PushNotificationManageAccountDynamic,
-        component: PushNotificationManageAccountDynamic,
-      },
+      // {
+      //   name: HomeRoutes.ScreenOnekeyLiteDetail,
+      //   component: OnekeyLiteDetail,
+      // },
+      // {
+      //   name: HomeRoutes.Protected,
+      //   component: Protected,
+      // },
+      // {
+      //   name: HomeRoutes.AddressBook,
+      //   component: AddressBook,
+      // },
+      // {
+      //   name: HomeRoutes.VolumeHaptic,
+      //   component: VolumeHaptic,
+      // },
+      // {
+      //   name: HomeRoutes.SettingsWebviewScreen,
+      //   component: Webview,
+      // },
+      // {
+      //   name: HomeRoutes.CloudBackup,
+      //   component: CloudBackup,
+      // },
+      // {
+      //   name: HomeRoutes.CloudBackupPreviousBackups,
+      //   component: CloudBackupPreviousBackups,
+      // },
+      // {
+      //   name: HomeRoutes.CloudBackupDetails,
+      //   component: CloudBackupDetails,
+      // },
+      // {
+      //   name: HomeRoutes.PushNotification,
+      //   component: PushNotification,
+      // },
+      // {
+      //   name: HomeRoutes.PushNotificationManagePriceAlert,
+      //   component: PushNotificationManagePriceAlert,
+      // },
+      // {
+      //   name: HomeRoutes.PushNotificationManageAccountDynamic,
+      //   component: PushNotificationManageAccountDynamic,
+      // },
     ],
   },
 ];
@@ -197,12 +197,13 @@ export const getStackTabScreen = (tabName: TabRoutes) => {
         }}
       >
         {screens.map((s, index) => {
-          const tabsWithHeader = [TabRoutes.Home, TabRoutes.Swap].map(
+          const tabsWithHeader = [TabRoutes.Souffl3, TabRoutes.Swap].map(
             buildTabName,
           );
           const customRenderHeader =
             index === 0 && tabsWithHeader.includes(s.name)
-              ? renderHeader
+              // ? renderHeader
+              ? undefined
               : undefined;
           return (
             // show navigation header

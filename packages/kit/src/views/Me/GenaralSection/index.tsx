@@ -157,7 +157,7 @@ export const GenaralSection = () => {
               )}
             />
           </Box>
-          <Box w="full">
+          {/* <Box w="full">
             <Select<string>
               title={intl.formatMessage({
                 id: 'form__fiat_currency',
@@ -187,8 +187,8 @@ export const GenaralSection = () => {
                 />
               )}
             />
-          </Box>
-          {supportedHaptics ? (
+          </Box> */}
+          {/* {supportedHaptics ? (
             <Pressable
               display="flex"
               flexDirection="row"
@@ -215,7 +215,7 @@ export const GenaralSection = () => {
                 <Icon name="ChevronRightSolid" size={20} />
               </Box>
             </Pressable>
-          ) : null}
+          ) : null} */}
         </Box>
       </Box>
     </Box>

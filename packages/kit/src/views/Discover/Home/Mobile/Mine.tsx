@@ -226,7 +226,7 @@ export const Mine = () => {
     if (platformEnv.isNative) {
       navigation.setOptions({
         title: intl.formatMessage({
-          id: 'title__explore',
+          id: 'app__app_name',
         }),
       });
     }

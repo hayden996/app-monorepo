@@ -127,16 +127,16 @@ const Welcome = () => {
         >
           <Box
             flexDirection={{ sm: 'row' }}
-            w={{ sm: hasPreviousBackups ? '100%' : '2/3' }}
+            w={{ sm: hasPreviousBackups ? '100%' : '1/2' }}
           >
-            <PressableListItem
+            {/* <PressableListItem
               icon="PlusCircleOutline"
               label={intl.formatMessage({
                 id: 'action__create_wallet',
               })}
               roundedBottom={{ base: 0, sm: 'xl' }}
               onPress={onPressCreateWallet}
-            />
+            /> */}
             <PressableListItem
               icon="SaveOutline"
               label={intl.formatMessage({
@@ -150,7 +150,7 @@ const Welcome = () => {
           </Box>
           <Box
             flexDirection={{ sm: 'row' }}
-            w={{ sm: hasPreviousBackups ? '100%' : '1/3' }}
+            w={{ sm: hasPreviousBackups ? '100%' : '1/2' }}
             mt={{ sm: hasPreviousBackups ? 4 : undefined }}
           >
             <Box flex={1}>

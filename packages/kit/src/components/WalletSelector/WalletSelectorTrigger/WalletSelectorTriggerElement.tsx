@@ -54,7 +54,7 @@ export const WalletSelectorTriggerElement: FC<Props> = ({
           navigation.navigate(RootRoutes.Onboarding);
         }}
       >
-        {intl.formatMessage({ id: 'action__create_wallet' })}
+        {intl.formatMessage({ id: 'action__import_wallet' })}
       </Button>
     );
   }

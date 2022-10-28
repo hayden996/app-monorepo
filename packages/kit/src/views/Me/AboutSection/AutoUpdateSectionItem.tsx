@@ -28,7 +28,8 @@ const AutoUpdateSectionItem: FC = () => {
   const toast = useToast();
   const { dispatch } = backgroundApiProxy;
   const { state, progress, latest } = useAutoUpdate();
-  const { autoDownload = true } = useSettings().updateSetting ?? {};
+  // const { autoDownload = true } = useSettings().updateSetting ?? {};
+  const autoDownload = false;
   const [showAvailabelBadge, setShowAvailableBadge] = useState(true);
 
   const onCheckUpdate = useCallback(() => {
@@ -69,9 +70,9 @@ const AutoUpdateSectionItem: FC = () => {
   );
 
   const Content = useMemo(() => {
-    if (platformEnv.isWeb || platformEnv.isExtension) {
+    // if (platformEnv.isWeb || platformEnv.isExtension ) {
       return null;
-    }
+    // }
 
     if (state === 'not-available' || state === 'checking') {
       return (

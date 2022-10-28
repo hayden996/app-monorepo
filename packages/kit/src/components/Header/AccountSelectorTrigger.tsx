@@ -81,7 +81,7 @@ const AccountSelectorTrigger: FC<Props> = ({
           navigation.navigate(RootRoutes.Onboarding);
         }}
       >
-        {intl.formatMessage({ id: 'action__create_wallet' })}
+        {intl.formatMessage({ id: 'action__import_wallet' })}
       </Button>
     );
   }
@@ -89,7 +89,7 @@ const AccountSelectorTrigger: FC<Props> = ({
   if (!account) {
     return (
       <Button onPress={handleToggleVisible}>
-        {intl.formatMessage({ id: 'action__create_account' })}
+        {intl.formatMessage({ id: 'action__import_wallet' })}
       </Button>
     );
   }

@@ -41,7 +41,8 @@ const RootNavigatorContainer: FC = ({ children }) => {
   const boardingCompleted = useAppSelector((s) => s.status.boardingCompleted);
   const initialRouteName = boardingCompleted
     ? RootRoutes.Root
-    : RootRoutes.Onboarding;
+    : RootRoutes.Root;
+    // : RootRoutes.Onboarding;
   if (platformEnv.isNative) {
     return (
       <RootNativeStack.Navigator

@@ -52,7 +52,7 @@ const IdentityAssertion: FC = ({ children }) => {
             }}
             size="lg"
           >
-            {intl.formatMessage({ id: 'action__create_wallet' })}
+            {intl.formatMessage({ id: 'action__import_wallet' })}
           </Button>
         </Box>
       </Box>

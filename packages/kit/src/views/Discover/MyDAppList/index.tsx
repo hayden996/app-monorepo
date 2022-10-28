@@ -37,7 +37,7 @@ const MyDappList: FC = () => {
     },
     [navigation, onItemSelect],
   );
-
+  return null;
   return (
     <MyDAppListContext.Provider
       value={{ onItemSelect: onSelect, defaultIndex }}

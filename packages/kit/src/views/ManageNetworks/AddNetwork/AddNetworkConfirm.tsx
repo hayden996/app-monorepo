@@ -103,8 +103,8 @@ function ViewNetworkModal(props: IViewNetworkModalProps) {
       },
       {
         label: intl.formatMessage({
-          id: 'form__explorer',
-          defaultMessage: 'Explorer',
+          id: 'app__app_name',
+          defaultMessage: 'Souffl3',
         }),
         value: exploreUrl,
       },

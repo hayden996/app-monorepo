@@ -82,13 +82,13 @@ export enum HomeRoutes {
 }
 export enum TabRoutes {
   // Overview = 'overview',
-  Home = 'home',
-  Swap = 'swap',
-  Discover = 'discover',
-  Me = 'me',
-  Developer = 'developer',
-  Send = 'send',
-  Receive = 'receive',
+  Profile = 'Profile',
+  Swap = 'Swap',
+  Souffl3 = 'Souffl3',
+  More = 'More',
+  Developer = 'Developer',
+  Send = 'Send',
+  Receive = 'Receive',
 }
 
 export enum CreateAccountModalRoutes {

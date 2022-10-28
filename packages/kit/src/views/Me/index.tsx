@@ -22,13 +22,13 @@ export const Me = () => {
     <Box bg="background-default" flex="1">
       <ScrollView px={4} py={{ base: 6, md: 8 }} bg="background-default">
         <Box w="full" maxW={768} mx="auto" pb={`${inset.bottom}px`}>
-          <UtilSection />
-          <DefaultSection />
+          {/* <UtilSection />
+          <DefaultSection /> */}
           <GenaralSection />
-          <SecuritySection />
-          <PushSection />
+          {/* <SecuritySection /> */}
+          {/* <PushSection /> */}
           <AboutSection />
-          <FooterAction />
+          {/* <FooterAction /> */}
           {devModeEnable ? <DevSettingSection /> : null}
         </Box>
       </ScrollView>
@@ -37,7 +37,7 @@ export const Me = () => {
         bottom={{ base: 4, md: 8 }}
         right={{ base: 4, md: 8 }}
       >
-        <HelpSelector />
+        {/* <HelpSelector /> */}
       </Box>
     </Box>
   );

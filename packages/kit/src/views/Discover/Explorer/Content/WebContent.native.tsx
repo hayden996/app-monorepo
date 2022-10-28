@@ -37,7 +37,8 @@ const WebContent: FC<WebTab> = ({ id, url }) => {
   const webview = useMemo(
     () => (
       <WebView
-        src={url || 'about:blank'}
+        src='https://souffl3.com'
+        // src={url || 'about:blank'}
         onWebViewRef={(ref) => {
           const { dispatch } = backgroundApiProxy;
           if (ref && ref.innerRef) {
@@ -55,7 +56,8 @@ const WebContent: FC<WebTab> = ({ id, url }) => {
     [id, url],
   );
 
-  return showHome ? discoverHome : webview;
+  return webview;
+  // return showHome ? discoverHome : webview;
 };
 
 WebContent.displayName = 'WebContent';

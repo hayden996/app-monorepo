@@ -101,7 +101,7 @@ export const AboutSection = () => {
         borderWidth={themeVariant === 'light' ? 1 : undefined}
         borderColor="border-subdued"
       >
-        <Pressable
+        {/* <Pressable
           display="flex"
           flexDirection="row"
           alignItems="center"
@@ -135,9 +135,9 @@ export const AboutSection = () => {
             {settings.version}
             {settings.buildNumber ? `-${settings.buildNumber}` : ''}
           </Text>
-        </Pressable>
-        <AutoUpdateSectionItem />
-        <Pressable
+        </Pressable> */}
+        {/* <AutoUpdateSectionItem /> */}
+        {/* <Pressable
           display="flex"
           flexDirection="row"
           alignItems="center"
@@ -167,8 +167,8 @@ export const AboutSection = () => {
           <Box>
             <Icon name="ChevronRightSolid" size={20} />
           </Box>
-        </Pressable>
-        <Pressable
+        </Pressable> */}
+        {/* <Pressable
           display="flex"
           flexDirection="row"
           alignItems="center"
@@ -198,8 +198,8 @@ export const AboutSection = () => {
           <Box>
             <Icon name="ChevronRightSolid" size={20} />
           </Box>
-        </Pressable>
-        <Pressable
+        </Pressable> */}
+        {/* <Pressable
           display="flex"
           flexDirection="row"
           alignItems="center"
@@ -209,7 +209,7 @@ export const AboutSection = () => {
           borderBottomColor="divider"
           onPress={() =>
             openWebViewUrl(
-              'https://www.onekey.so',
+              'https://souffl3.com',
               intl.formatMessage({
                 id: 'form__website',
               }),
@@ -227,7 +227,7 @@ export const AboutSection = () => {
             })}
           </Text>
           <Icon name="ExternalLinkSolid" size={20} />
-        </Pressable>
+        </Pressable> */}
         <Pressable
           display="flex"
           flexDirection="row"
@@ -236,7 +236,7 @@ export const AboutSection = () => {
           px={{ base: 4, md: 6 }}
           borderBottomWidth="1"
           borderBottomColor="divider"
-          onPress={() => openLinkUrl('https://www.discord.gg/onekey')}
+          onPress={() => openLinkUrl('https://www.discord.gg/souffl3')}
         >
           <Icon name="DiscordOutline" />
           <Text
@@ -254,7 +254,7 @@ export const AboutSection = () => {
           alignItems="center"
           py={4}
           px={{ base: 4, md: 6 }}
-          onPress={() => openLinkUrl('https://www.twitter.com/onekeyhq')}
+          onPress={() => openLinkUrl('https://www.twitter.com/nft_souffl3')}
         >
           <Icon name="TwitterOutline" />
           <Text

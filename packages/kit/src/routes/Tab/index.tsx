@@ -34,7 +34,7 @@ const TabNavigator = () => {
     networkId,
   } = useActiveWalletAccount();
 
-  const renderHeader = useCallback(() => <LayoutHeaderMobile />, []);
+  const renderHeader = undefined;//useCallback(() => <LayoutHeaderMobile />, []);
 
   const foldableList = useMemo(
     () => [
@@ -131,7 +131,7 @@ const TabNavigator = () => {
       tabRoutes.map((tab) => (
         <Tab.Screen
           key={tab.name}
-          name={tab.name}
+          name={intl.formatMessage({ id: tab.translationId }) as any}
           component={
             isVerticalLayout ? tab.component : getStackTabScreen(tab.name)
           }

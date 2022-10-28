@@ -407,7 +407,7 @@ const SwapButton = () => {
   if (!wallet) {
     return (
       <Button size="xl" type="primary" onPress={onCreateWallet} key="addWallet">
-        {intl.formatMessage({ id: 'action__create_wallet' })}
+        {intl.formatMessage({ id: 'action__import_wallet' })}
       </Button>
     );
   }
