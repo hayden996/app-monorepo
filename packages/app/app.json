@@ -1,10 +1,10 @@
 {
   "expo": {
-    "scheme": "onekey-wallet",
-    "name": "OneKey Wallet",
-    "slug": "OneKey-Wallet",
-    "owner": "onekeyhq",
-    "version": "1.0.0",
+    "scheme": "Souffl3",
+    "name": "Souffl3",
+    "slug": "Souffl3",
+    "owner": "3njoy",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -15,11 +15,15 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "so.onekey.wallet",
-      "associatedDomains": ["applinks:app.onekey.so"]
+      "bundleIdentifier": "com.3njoy.souffl3",
+      "associatedDomains": [
+        "applinks:souffl3.com"
+      ]
     },
     "android": {
       "adaptiveIcon": {

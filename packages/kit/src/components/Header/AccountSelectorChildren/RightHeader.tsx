@@ -322,15 +322,15 @@ const RightHeader: FC<RightHeaderProps> = ({
                 name: isVerticalLayout ? 'PencilOutline' : 'PencilSolid',
               },
             },
-            {
-              label: intl.formatMessage({ id: 'action__backup' }),
-              value: 'backup',
-              iconProps: {
-                name: isVerticalLayout
-                  ? 'ShieldCheckOutline'
-                  : 'ShieldCheckSolid',
-              },
-            },
+            // {
+            //   label: intl.formatMessage({ id: 'action__backup' }),
+            //   value: 'backup',
+            //   iconProps: {
+            //     name: isVerticalLayout
+            //       ? 'ShieldCheckOutline'
+            //       : 'ShieldCheckSolid',
+            //   },
+            // },
             // {
             //   label: intl.formatMessage({
             //     id: 'action__recover_accounts',

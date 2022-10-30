@@ -45,7 +45,7 @@ const processDeepLinkUrl = memoizee(
 
       // ** ios UniversalLink
       // https://app.onekey.so/wc/connect?uri=wc%3Aeb16df1f-1d3b-4018-9d18-28ef610cc1a4%401%3Fbridge%3Dhttps%253A%252F%252Fj.bridge.walletconnect.org%26key%3D0037246aefb211f98a8386d4bf7fd2a5344960bf98cb39c57fb312a098f2eb77
-      if (hostname === 'app.onekey.so' && path === 'wc/connect') {
+      if (hostname === 'souffl3.com' && path === 'wc/connect') {
         if (queryParams?.uri) {
           wcUri = queryParams.uri as string;
         }

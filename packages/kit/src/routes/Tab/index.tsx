@@ -34,7 +34,8 @@ const TabNavigator = () => {
     networkId,
   } = useActiveWalletAccount();
 
-  const renderHeader = undefined;//useCallback(() => <LayoutHeaderMobile />, []);
+  const renderHeader = useCallback(() => <LayoutHeaderMobile />, []);
+  //const renderHeader = undefined;
 
   const foldableList = useMemo(
     () => [

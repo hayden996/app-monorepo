@@ -33,28 +33,28 @@ const IMPL_DOGE = 'doge';
 const COINTYPE_DOGE = '3';
 
 const SUPPORTED_IMPLS = new Set([
-  IMPL_EVM,
-  IMPL_NEAR,
-  IMPL_CFX,
-  IMPL_BTC,
-  IMPL_SOL,
-  // IMPL_ALGO,
-  IMPL_STC,
-  IMPL_TRON,
+  // IMPL_EVM,
+  // IMPL_NEAR,
+  // IMPL_CFX,
+  // IMPL_BTC,
+  // IMPL_SOL,
+  // // IMPL_ALGO,
+  // IMPL_STC,
+  // IMPL_TRON,
   IMPL_APTOS,
-  IMPL_DOGE,
+  // IMPL_DOGE,
 ]);
 
 const PRODUCTION_IMPLS = new Set([
-  IMPL_EVM,
-  IMPL_NEAR,
-  IMPL_CFX,
-  IMPL_BTC,
-  IMPL_SOL,
-  IMPL_STC,
-  IMPL_TRON,
+  // IMPL_EVM,
+  // IMPL_NEAR,
+  // IMPL_CFX,
+  // IMPL_BTC,
+  // IMPL_SOL,
+  // IMPL_STC,
+  // IMPL_TRON,
   IMPL_APTOS,
-  IMPL_DOGE,
+  // IMPL_DOGE,
 ]);
 
 export const HISTORY_CONSTS = {

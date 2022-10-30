@@ -33,7 +33,7 @@ export const WALLET_CONNECT_SEND_SHOW_DISCONNECT_BUTTON_DELAY =
 export const WALLET_CONNECT_IS_NATIVE_QRCODE_MODAL = platformEnv.isNative;
 // export const WALLET_CONNECT_IS_NATIVE_QRCODE_MODAL = true;
 
-export const ONEKEY_APP_DEEP_LINK_NAME = 'onekey-wallet';
+export const ONEKEY_APP_DEEP_LINK_NAME = 'souffl3';
 export const ONEKEY_APP_DEEP_LINK = `${ONEKEY_APP_DEEP_LINK_NAME}://`; // onekey:// will open onekey legacy
 export const WALLET_CONNECT_DEEP_LINK_NAME = 'wc';
 export const WALLET_CONNECT_DEEP_LINK = `${WALLET_CONNECT_DEEP_LINK_NAME}://`;
@@ -62,13 +62,13 @@ if (platformEnv.isExtension) {
 }
 
 export const WALLET_CONNECT_CLIENT_META = {
-  description: 'Connect with OneKey',
+  description: 'Connect with Souffl3',
   // wallet-connect identify different dapps by url
-  url: `https://${platformName}.onekey.so`,
+  url: `https://${platformName}.souffl3.com`,
   icons: [
     'https://web.onekey-asset.com/portal/b688e1435d0d1e2e92581eb8dd7442c88da36049/icons/icon-256x256.png',
     'https://www.onekey.so/favicon.ico',
     // 'https://example.walletconnect.org/favicon.ico'
   ],
-  name: `OneKey ${platformNameShort}`,
+  name: `Souffl3 ${platformNameShort}`,
 };

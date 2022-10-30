@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>OneKey</string>
+	<string>Souffl3</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,11 +13,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>Souffl3</string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>0.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -25,10 +25,8 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>so.onekey.app.wallet</string>
-				<string>onekey-wallet</string>
-				<string>wc</string>
-				<string>ethereum</string>
+				<string>souffl3.com</string>
+				<string>souffl3</string>
 			</array>
 		</dict>
 	</array>
@@ -36,6 +34,12 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tpoutside</string>
+		<string>imtokenv2</string>
+		<string>bitkeep</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NFCReaderUsageDescription</key>
@@ -89,6 +93,12 @@
 			<integer>4294967295</integer>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PlusJakartaSans-Bold.ttf</string>
+		<string>PlusJakartaSans-Medium.ttf</string>
+		<string>PlusJakartaSans-SemiBold.ttf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -122,17 +132,5 @@
 		<string>D156000132834001</string>
 		<string>D1560001328300424C4400006E666301</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>PlusJakartaSans-Bold.ttf</string>
-		<string>PlusJakartaSans-Medium.ttf</string>
-		<string>PlusJakartaSans-SemiBold.ttf</string>
-	</array>
-	<key>LSApplicationQueriesSchemes</key>
-  <array>
-    <string>tpoutside</string>
-    <string>imtokenv2</string>
-    <string>bitkeep</string>
-  </array>
 </dict>
 </plist>

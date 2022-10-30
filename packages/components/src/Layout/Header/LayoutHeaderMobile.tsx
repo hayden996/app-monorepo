@@ -15,12 +15,12 @@ export function LayoutHeaderMobile() {
       headerRight={() => (
         <HStack space={2}>
           <NetworkAccountSelectorTrigger type="basic" />
-          <IconButton
+          {/* <IconButton
             name="DotsVerticalSolid"
             onPress={() => showHomeMoreMenu()}
             circle
             size="sm"
-          />
+          /> */}
         </HStack>
       )}
     />
