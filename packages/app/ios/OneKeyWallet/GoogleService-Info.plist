@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>12345678901-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNv.apps.googleusercontent.com</string>
+	<string>1086319428698-57hlvnqu51n6dlicflss9cadarrnjq1n.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.12345678901-R0xFX0FQUF9JRDwva2V5PgoJPHN0cmlu</string>
+	<string>com.googleusercontent.apps.1086319428698-57hlvnqu51n6dlicflss9cadarrnjq1n</string>
 	<key>API_KEY</key>
-	<string>T048L2tleT4KCTxzdHJpbmc+MTwvc3RyaW5nPgo</string>
+	<string>AIzaSyAxNcY87PMF4LealAAVBW8d29c3HKdpLWM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>12345678901</string>
+	<string>1086319428698</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>so.onekey.wallet</string>
+	<string>com.3njoy.souffl3</string>
 	<key>PROJECT_ID</key>
-	<string>onekey-test</string>
+	<string>souffl3-nft</string>
 	<key>STORAGE_BUCKET</key>
-	<string>onekey-test.com</string>
+	<string>souffl3-nft.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:12345678901:ios:dHRwczovL29uZWtleS11bm</string>
+	<string>1:1086319428698:ios:28ffdc8225f0cff8c78463</string>
 	<key>DATABASE_URL</key>
-	<string>https://onekey-test.firebaseio.com</string>
+	<string>https://souffl3-nft-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>

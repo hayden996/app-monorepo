@@ -18,7 +18,7 @@ platform :ios, '14.0'
 install! 'cocoapods', :deterministic_uuids => false
 
 
-target 'OneKeyWallet' do
+target 'Souffl3' do
   use_expo_modules!
   post_integrate do |installer|
     begin

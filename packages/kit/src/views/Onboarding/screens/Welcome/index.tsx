@@ -14,6 +14,8 @@ import {
   Text,
   useUserDevice,
 } from '@onekeyhq/components';
+
+import LogoSouffl3 from '@onekeyhq/kit/assets/onboarding/logo_souffl3.png';
 import LogoLedger from '@onekeyhq/kit/assets/onboarding/logo_ledger.png';
 import LogoMetaMask from '@onekeyhq/kit/assets/onboarding/logo_metamask.png';
 import LogoOneKey from '@onekeyhq/kit/assets/onboarding/logo_onekey.png';
@@ -32,6 +34,7 @@ import { IOnboardingRoutesParams } from '../../routes/types';
 
 import PressableListItem from './PressableListItem';
 import TermsOfService from './TermsOfService';
+import { improve } from '@cloudinary/url-gen/actions/adjust';
 
 type NavigationProps = StackNavigationProp<
   IOnboardingRoutesParams,
@@ -111,7 +114,8 @@ const Welcome = () => {
         pt={{ base: isSmallHeight ? 8 : 20, sm: 0 }}
         scaleFade
       >
-        <Icon name="BrandLogoIllus" size={48} />
+        {/* <Icon name="BrandLogoIllus" size={48} /> */}
+        <Image source={LogoSouffl3} size={12}></Image>
         <Text typography={{ sm: 'DisplayXLarge', md: 'Display2XLarge' }} mt={6}>
           {intl.formatMessage({ id: 'onboarding__landing_welcome_title' })}
           {'\n'}
