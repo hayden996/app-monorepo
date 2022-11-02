@@ -2,12 +2,14 @@ import React, { useCallback } from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { useThemeValue } from '@onekeyhq/components';
+import { useThemeValue, Text } from '@onekeyhq/components';
 import { LayoutHeaderDesktop } from '@onekeyhq/components/src/Layout/Header/LayoutHeaderDesktop';
 import { LocaleIds } from '@onekeyhq/components/src/locale';
 import AddressBook from '@onekeyhq/kit/src/views/AddressBook/Listing';
 import DevelopScreen from '@onekeyhq/kit/src/views/Developer';
 import DiscoverScreen from '@onekeyhq/kit/src/views/Discover';
+import CollectionScreen from '@onekeyhq/kit/src/views/Collection';
+import MarketScreen from '@onekeyhq/kit/src/views/MarketPlace';
 import DAppList from '@onekeyhq/kit/src/views/Discover/DAppList';
 import DiscoverHome from '@onekeyhq/kit/src/views/Discover/Home';
 import MyDAppList from '@onekeyhq/kit/src/views/Discover/MyDAppList';
@@ -44,23 +46,47 @@ export interface TabRouteConfig {
 }
 
 export const tabRoutes: TabRouteConfig[] = [
+  // {
+  //   name: TabRoutes.Profile,
+  //   component: DiscoverScreen,
+  //   tabBarIcon: () => 'CompassOutline',
+  //   translationId: 'app__app_name',
+  //   children: [
+  //     {
+  //       name: HomeRoutes.ExploreScreen,
+  //       component: DiscoverHome,
+  //     },
+  //     {
+  //       name: HomeRoutes.DAppListScreen,
+  //       component: DAppList,
+  //     },
+  //     {
+  //       name: HomeRoutes.MyDAppListScreen,
+  //       component: MyDAppList,
+  //     },
+  //   ],
+  // },
   {
-    name: TabRoutes.Profile,
-    component: DiscoverScreen,
+    name: TabRoutes.Market,
+    component: MarketScreen,
     tabBarIcon: () => 'CompassOutline',
-    translationId: 'app__app_name',
+    translationId: 'title__market',
     children: [
       {
         name: HomeRoutes.ExploreScreen,
         component: DiscoverHome,
       },
+    ],
+  },
+  {
+    name: TabRoutes.Collection,
+    component: CollectionScreen,
+    tabBarIcon: () => 'CompassOutline',
+    translationId: 'title__explore',
+    children: [
       {
-        name: HomeRoutes.DAppListScreen,
-        component: DAppList,
-      },
-      {
-        name: HomeRoutes.MyDAppListScreen,
-        component: MyDAppList,
+        name: HomeRoutes.ExploreScreen,
+        component: DiscoverHome,
       },
     ],
   },

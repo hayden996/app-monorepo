@@ -140,13 +140,11 @@ const TabNavigator = () => {
             tabBarIcon: tab.tabBarIcon,
             tabBarLabel: intl.formatMessage({ id: tab.translationId }),
           }}
-        />
-      )),
+        />)
+      ),
     [intl, isVerticalLayout],
   );
-
-  return useMemo(
-    () => (
+  return (
       <LazyDisplayView
         delay={100}
         hideOnUnmount={false}
@@ -155,7 +153,7 @@ const TabNavigator = () => {
         <Tab.Navigator
           screenOptions={{
             lazy: true,
-            header: renderHeader,
+            header: navigationRef.current?.getCurrentRoute()?.name != intl.formatMessage({ id: "form__account" }) ? undefined : renderHeader,
             // @ts-expect-error
             foldableList,
           }}
@@ -163,9 +161,7 @@ const TabNavigator = () => {
           {tabRoutesList}
         </Tab.Navigator>
       </LazyDisplayView>
-    ),
-    [foldableList, renderHeader, tabRoutesList],
-  );
+    );
 };
 
 export default memo(TabNavigator);

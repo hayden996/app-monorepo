@@ -89,6 +89,8 @@ export enum TabRoutes {
   Developer = 'Developer',
   Send = 'Send',
   Receive = 'Receive',
+  Collection = 'Collection',
+  Market = 'Market',
 }
 
 export enum CreateAccountModalRoutes {
