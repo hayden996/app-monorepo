@@ -110,7 +110,7 @@ export const SecuritySection = () => {
           borderWidth={themeVariant === 'light' ? 1 : undefined}
           borderColor="border-subdued"
         >
-          {platformEnv.isNativeIOS ? (
+          {/* {platformEnv.isNativeIOS ? (
             <Pressable
               display="flex"
               flexDirection="row"
@@ -139,7 +139,7 @@ export const SecuritySection = () => {
                 <Icon name="ChevronRightSolid" size={20} />
               </Box>
             </Pressable>
-          ) : undefined}
+          ) : undefined} */}
           <Pressable
             display="flex"
             flexDirection="row"
@@ -281,7 +281,7 @@ export const SecuritySection = () => {
               />
             </Box>
           ) : null}
-          <Pressable
+          {/* <Pressable
             display="flex"
             flexDirection="row"
             justifyContent="space-between"
@@ -307,7 +307,7 @@ export const SecuritySection = () => {
               <Icon name="ChevronRightSolid" size={20} />
             </Box>
           </Pressable>
-          <ResetButton />
+          <ResetButton /> */}
         </Box>
       </Box>
     </>

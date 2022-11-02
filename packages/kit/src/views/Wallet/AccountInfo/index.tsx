@@ -252,7 +252,7 @@ const AccountOption: FC<AccountOptionProps> = ({ isSmallView }) => {
           {intl.formatMessage({ id: 'action__receive' })}
         </Typography.CaptionStrong>
       </Box>
-      <Box flex={{ base: 1, sm: 0 }} mx={3} minW="56px" alignItems="center">
+      {/* <Box flex={{ base: 1, sm: 0 }} mx={3} minW="56px" alignItems="center">
         <IconButton
           circle
           size={isSmallView ? 'xl' : 'lg'}
@@ -274,7 +274,7 @@ const AccountOption: FC<AccountOptionProps> = ({ isSmallView }) => {
         >
           {intl.formatMessage({ id: 'title__swap' })}
         </Typography.CaptionStrong>
-      </Box>
+      </Box> */}
 
       <Box
         ref={moreButtonRef}

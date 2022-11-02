@@ -350,7 +350,7 @@ export function useWalletConnectQrcodeModal() {
       if (!client.walletService && finalSession) {
         client.walletService =
           await serviceWalletConnect.findWalletServiceBySession({
-            session: finalSession,
+            session: finalSession as any,
           });
       }
 
@@ -361,7 +361,7 @@ export function useWalletConnectQrcodeModal() {
         if (finalSession) {
           await client.saveAccountSession({
             accountId,
-            session: finalSession,
+            session: finalSession as any,
           });
         }
       }

@@ -64,18 +64,18 @@ export const tabRoutes: TabRouteConfig[] = [
       },
     ],
   },
-  {
-    name: TabRoutes.Swap,
-    component: SwapScreen,
-    tabBarIcon: () => 'ChartSquareLineOutline',
-    translationId: 'title__swap',
-    children: [
-      {
-        name: HomeRoutes.SwapHistory,
-        component: SwapHistory,
-      },
-    ],
-  },
+  // {
+  //   name: TabRoutes.Swap,
+  //   component: SwapScreen,
+  //   tabBarIcon: () => 'ChartSquareLineOutline',
+  //   translationId: 'title__swap',
+  //   children: [
+  //     {
+  //       name: HomeRoutes.SwapHistory,
+  //       component: SwapHistory,
+  //     },
+  //   ],
+  // },
   {
     name: TabRoutes.Souffl3,
     component: HomeScreen,

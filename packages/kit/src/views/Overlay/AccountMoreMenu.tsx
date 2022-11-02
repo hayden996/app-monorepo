@@ -152,39 +152,39 @@ const AccountMoreSettings: FC<{ closeOverlay: () => void }> = ({
         icon: isVerticalLayout ? 'LightBulbOutline' : 'LightBulbSolid',
       },
       // TODO Connected Sites
-      walletType !== 'watching' && {
-        id: 'action__buy_crypto',
-        onPress: () => {
-          if (!account) return;
-          navigation.navigate(RootRoutes.Modal, {
-            screen: ModalRoutes.FiatPay,
-            params: {
-              screen: FiatPayRoutes.SupportTokenListModal,
-              params: {
-                networkId: network?.id ?? '',
-              },
-            },
-          });
-        },
-        icon: isVerticalLayout ? 'PlusOutline' : 'PlusSolid',
-      },
-      walletType !== 'watching' && {
-        id: 'action__sell_crypto',
-        onPress: () => {
-          if (!account) return;
-          navigation.navigate(RootRoutes.Modal, {
-            screen: ModalRoutes.FiatPay,
-            params: {
-              screen: FiatPayRoutes.SupportTokenListModal,
-              params: {
-                networkId: network?.id ?? '',
-                type: 'Sell',
-              },
-            },
-          });
-        },
-        icon: isVerticalLayout ? 'CashOutline' : 'CashSolid',
-      },
+      // walletType !== 'watching' && {
+      //   id: 'action__buy_crypto',
+      //   onPress: () => {
+      //     if (!account) return;
+      //     navigation.navigate(RootRoutes.Modal, {
+      //       screen: ModalRoutes.FiatPay,
+      //       params: {
+      //         screen: FiatPayRoutes.SupportTokenListModal,
+      //         params: {
+      //           networkId: network?.id ?? '',
+      //         },
+      //       },
+      //     });
+      //   },
+      //   icon: isVerticalLayout ? 'PlusOutline' : 'PlusSolid',
+      // },
+      // walletType !== 'watching' && {
+      //   id: 'action__sell_crypto',
+      //   onPress: () => {
+      //     if (!account) return;
+      //     navigation.navigate(RootRoutes.Modal, {
+      //       screen: ModalRoutes.FiatPay,
+      //       params: {
+      //         screen: FiatPayRoutes.SupportTokenListModal,
+      //         params: {
+      //           networkId: network?.id ?? '',
+      //           type: 'Sell',
+      //         },
+      //       },
+      //     });
+      //   },
+      //   icon: isVerticalLayout ? 'CashOutline' : 'CashSolid',
+      // },
       {
         id: 'action__copy_address',
         onPress: () => {
