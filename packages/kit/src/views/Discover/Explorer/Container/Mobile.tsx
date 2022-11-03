@@ -16,6 +16,9 @@ import {
 
 import { useWebTab } from '../Controller/useWebTabs';
 import { ExplorerViewProps, MatchDAppItemType } from '../explorerUtils';
+import {
+  useSafeAreaInsets,
+} from '../../../../../../components/src/Provider/hooks';
 
 type NavigationProps = ModalScreenProps<DiscoverRoutesParams>;
 
@@ -53,9 +56,13 @@ const Mobile: FC<ExplorerViewProps> = ({
     });
   };
 
+  const insets = useSafeAreaInsets();
+
   return (
     <Box flex="1">
-      <Box flex={1}>{explorerContent}</Box>
+      <Box flex={1}
+      top={insets.top+44}
+      >{explorerContent}</Box>
       {/* {!!showExplorerBar && (
         <Box
           w="100%"

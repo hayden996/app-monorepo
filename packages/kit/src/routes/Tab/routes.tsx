@@ -46,29 +46,9 @@ export interface TabRouteConfig {
 }
 
 export const tabRoutes: TabRouteConfig[] = [
-  // {
-  //   name: TabRoutes.Profile,
-  //   component: DiscoverScreen,
-  //   tabBarIcon: () => 'CompassOutline',
-  //   translationId: 'app__app_name',
-  //   children: [
-  //     {
-  //       name: HomeRoutes.ExploreScreen,
-  //       component: DiscoverHome,
-  //     },
-  //     {
-  //       name: HomeRoutes.DAppListScreen,
-  //       component: DAppList,
-  //     },
-  //     {
-  //       name: HomeRoutes.MyDAppListScreen,
-  //       component: MyDAppList,
-  //     },
-  //   ],
-  // },
   {
     name: TabRoutes.Market,
-    component: MarketScreen,
+    component: DiscoverScreen,
     tabBarIcon: () => 'CompassOutline',
     translationId: 'title__market',
     children: [
@@ -76,8 +56,28 @@ export const tabRoutes: TabRouteConfig[] = [
         name: HomeRoutes.ExploreScreen,
         component: DiscoverHome,
       },
+      // {
+      //   name: HomeRoutes.DAppListScreen,
+      //   component: DAppList,
+      // },
+      // {
+      //   name: HomeRoutes.MyDAppListScreen,
+      //   component: MyDAppList,
+      // },
     ],
   },
+  // {
+  //   name: TabRoutes.Market,
+  //   component: MarketScreen,
+  //   tabBarIcon: () => 'CompassOutline',
+  //   translationId: 'title__market',
+  //   children: [
+  //     {
+  //       name: HomeRoutes.ExploreScreen,
+  //       component: DiscoverHome,
+  //     },
+  //   ],
+  // },
   {
     name: TabRoutes.Collection,
     component: CollectionScreen,

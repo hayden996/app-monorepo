@@ -28,13 +28,22 @@ export const homeTab: WebTab = {
   id: 'home',
   url: '',
   // TODO i18n
-  title: 'OneKey',
+  title: 'Souffl3',
   isCurrent: true,
   canGoBack: false,
   loading: false,
 };
+export const collectionTab: WebTab = {
+  id: 'collection',
+  url: '',
+  // TODO i18n
+  title: 'Collection',
+  isCurrent: true,
+  canGoBack: false,
+  loading: false,
+}
 const initialState: WebTabsInitialState = {
-  tabs: [homeTab],
+  tabs: [homeTab, collectionTab],
   currentTabId: 'home',
   incomingUrl: '',
 };

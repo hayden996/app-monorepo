@@ -6,6 +6,7 @@ import { useIntl } from 'react-intl';
 import { useIsVerticalLayout } from '@onekeyhq/components';
 import { createBottomTabNavigator } from '@onekeyhq/components/src/Layout/BottomTabs';
 import { LayoutHeaderMobile } from '@onekeyhq/components/src/Layout/Header/LayoutHeaderMobile';
+import { LayoutHeaderMobile2 } from '@onekeyhq/components/src/Layout/Header/LayoutHeaderMobile2';
 import {
   getActiveWalletAccount,
   useActiveWalletAccount,
@@ -35,7 +36,7 @@ const TabNavigator = () => {
   } = useActiveWalletAccount();
 
   const renderHeader = useCallback(() => <LayoutHeaderMobile />, []);
-  //const renderHeader = undefined;
+  const renderHeader2 = useCallback(() => <LayoutHeaderMobile2 />, []);
 
   const foldableList = useMemo(
     () => [
@@ -153,7 +154,7 @@ const TabNavigator = () => {
         <Tab.Navigator
           screenOptions={{
             lazy: true,
-            header: navigationRef.current?.getCurrentRoute()?.name != intl.formatMessage({ id: "form__account" }) ? undefined : renderHeader,
+            header: navigationRef.current?.getCurrentRoute()?.name != intl.formatMessage({ id: "form__account" }) ? renderHeader2 : renderHeader,
             // @ts-expect-error
             foldableList,
           }}

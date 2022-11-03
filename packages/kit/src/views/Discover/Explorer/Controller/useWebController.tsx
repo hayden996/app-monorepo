@@ -14,6 +14,7 @@ import {
   homeTab,
   setIncomingUrl,
   setWebTabData,
+  WebTab,
 } from '../../../../store/reducers/webTabs';
 import DappOpenHintDialog from '../DappOpenHintDialog';
 import {
@@ -153,6 +154,7 @@ export const useWebController = ({
     tabs,
     currentTabId,
     currentTab: tab,
+    canGoBack: tab.canGoBack,
     gotoSite,
     openMatchDApp,
     goBack: () => {
