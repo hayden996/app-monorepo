@@ -49,10 +49,10 @@ export function LayoutHeaderMobile2() {
             style={{width:40}}
           />
         )}
-        <Typography.DisplayMedium>
+        <Typography.DisplaySmall>
           {/* {intl.formatMessage({ id: translationId })} */}
           {navigationRef.current?.getCurrentRoute()?.name}
-        </Typography.DisplayMedium>
+        </Typography.DisplaySmall>
         <Box width={50}></Box>
       </Box>
       </Box>

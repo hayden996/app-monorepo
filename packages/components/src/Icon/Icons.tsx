@@ -91,6 +91,7 @@ import CompassOutline from "./react/outline/Compass";
 import ConnectOutline from "./react/outline/Connect";
 import ConnectOffOutline from "./react/outline/ConnectOff";
 import CreditCardOutline from "./react/outline/CreditCard";
+import MarketOutline from "./react/outline/Market";
 import CubeOutline from "./react/outline/Cube";
 import CubeTransparentOutline from "./react/outline/CubeTransparent";
 import CurrencyBangladeshiOutline from "./react/outline/CurrencyBangladeshi";
@@ -239,6 +240,7 @@ import SwitchVerticalOutline from "./react/outline/SwitchVertical";
 import TableOutline from "./react/outline/Table";
 import TagOutline from "./react/outline/Tag";
 import TemplateOutline from "./react/outline/Template";
+import DiscoverOutline from "./react/outline/Discover";
 import TerminalOutline from "./react/outline/Terminal";
 import ThumbDownOutline from "./react/outline/ThumbDown";
 import ThumbUpOutline from "./react/outline/ThumbUp";
@@ -1056,6 +1058,8 @@ const icons = {
   WifiSolid,
   ZoomInSolid,
   ZoomOutSolid,
+  MarketOutline,
+  DiscoverOutline,
 };
 export type ICON_NAMES = keyof typeof icons;
 export default icons;

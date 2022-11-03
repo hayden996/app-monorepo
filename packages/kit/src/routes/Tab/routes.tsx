@@ -49,7 +49,7 @@ export const tabRoutes: TabRouteConfig[] = [
   {
     name: TabRoutes.Market,
     component: DiscoverScreen,
-    tabBarIcon: () => 'CompassOutline',
+    tabBarIcon: () => 'MarketOutline',
     translationId: 'title__market',
     children: [
       {
@@ -81,7 +81,7 @@ export const tabRoutes: TabRouteConfig[] = [
   {
     name: TabRoutes.Collection,
     component: CollectionScreen,
-    tabBarIcon: () => 'CompassOutline',
+    tabBarIcon: () => 'DiscoverOutline',
     translationId: 'title__explore',
     children: [
       {

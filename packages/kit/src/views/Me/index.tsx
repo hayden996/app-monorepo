@@ -19,7 +19,7 @@ export const Me = () => {
 
   const inset = useSafeAreaInsets();
   return (
-    <Box bg="background-default" flex="1">
+    <Box bg="background-default" flex="1" top={inset.top+44}>
       <ScrollView px={4} py={{ base: 6, md: 8 }} bg="background-default">
         <Box w="full" maxW={768} mx="auto" pb={`${inset.bottom}px`}>
           {/* <UtilSection />
