@@ -82,11 +82,11 @@ const Explorer: FC = () => {
 
   const explorerContent = useMemo(
     () =>
-      tabs.map((tab) => (
-        <Freeze key={`${tab.id}-Freeze`} freeze={!tab.isCurrent}>
-          <WebContent {...tab} />
+      (
+        <Freeze key={`${tabs[0].id}-Freeze`} freeze={!tabs[0].isCurrent}>
+          <WebContent {...tabs[0]} />
         </Freeze>
-      )),
+      ),
     [tabs],
   );
 
