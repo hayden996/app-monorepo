@@ -20,6 +20,12 @@ export function LayoutHeaderMobile2() {
   const intl = useIntl();
   const insets = useSafeAreaInsets();
 
+  const getTitle = (name: string | undefined) => {
+    debugLogger.common.info("ssssss", navigationRef.current?.getCurrentRoute());
+    const { translationId } = tabRoutes.find(({ name: routeName }) => name === routeName) ?? {};
+    return intl.formatMessage({ id: translationId});
+  }
+
   return (
     <Box flex="1">
       <Box>
@@ -50,8 +56,8 @@ export function LayoutHeaderMobile2() {
           />
         )}
         <Typography.DisplaySmall>
-          {/* {intl.formatMessage({ id: translationId })} */}
-          {navigationRef.current?.getCurrentRoute()?.name}
+          {/* {intl.formatMessage({ id: navigationRef.current?.getCurrentRoute()?. })} */}
+          {getTitle(navigationRef.current?.getCurrentRoute()?.name)}
         </Typography.DisplaySmall>
         <Box width={50}></Box>
       </Box>

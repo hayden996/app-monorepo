@@ -82,15 +82,22 @@ export enum HomeRoutes {
 }
 export enum TabRoutes {
   // Overview = 'overview',
-  Profile = 'Profile',
-  Swap = 'Swap',
-  Souffl3 = 'Souffl3',
-  More = 'More',
-  Developer = 'Developer',
-  Send = 'Send',
-  Receive = 'Receive',
-  Collection = 'Collection',
-  Market = 'Market',
+  // Profile = 'Profile',
+  // Swap = 'Swap',
+  // Souffl3 = 'Souffl3',
+  // More = 'More',
+  // Developer = 'Developer',
+  // Send = 'Send',
+  // Receive = 'Receive',
+  Home = 'home',
+  Swap = 'swap',
+  Discover = 'discover',
+  Me = 'me',
+  Developer = 'developer',
+  Send = 'send',
+  Receive = 'receive',
+  Collection = 'collection',
+  // Market = 'market',
 }
 
 export enum CreateAccountModalRoutes {

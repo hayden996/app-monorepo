@@ -64,7 +64,7 @@ export const openDapp = (url: string) => {
     const navigation = getAppNavigation();
     backgroundApiProxy.dispatch(setIncomingUrl(url));
 
-    navigation?.dispatch(TabActions.jumpTo(TabRoutes.Souffl3, {}));
+    navigation?.dispatch(TabActions.jumpTo(TabRoutes.Discover, {}));
   } else {
     window.open(url, '_blank');
   }

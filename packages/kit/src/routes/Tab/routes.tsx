@@ -47,7 +47,7 @@ export interface TabRouteConfig {
 
 export const tabRoutes: TabRouteConfig[] = [
   {
-    name: TabRoutes.Market,
+    name: TabRoutes.Discover,
     component: DiscoverScreen,
     tabBarIcon: () => 'MarketOutline',
     translationId: 'title__market',
@@ -103,7 +103,7 @@ export const tabRoutes: TabRouteConfig[] = [
   //   ],
   // },
   {
-    name: TabRoutes.Souffl3,
+    name: TabRoutes.Home,
     component: HomeScreen,
     tabBarIcon: () => 'CreditCardOutline',
     translationId: 'form__account',
@@ -119,7 +119,7 @@ export const tabRoutes: TabRouteConfig[] = [
     ],
   },
   {
-    name: TabRoutes.More,
+    name: TabRoutes.Me,
     component: MeScreen,
     tabBarIcon: () => 'MenuOutline',
     translationId: 'title__menu',
@@ -223,7 +223,7 @@ export const getStackTabScreen = (tabName: TabRoutes) => {
         }}
       >
         {screens.map((s, index) => {
-          const tabsWithHeader = [TabRoutes.Souffl3, TabRoutes.Swap].map(
+          const tabsWithHeader = [TabRoutes.Home, TabRoutes.Swap].map(
             buildTabName,
           );
           const customRenderHeader =

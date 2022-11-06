@@ -133,7 +133,7 @@ const TabNavigator = () => {
       tabRoutes.map((tab) => (
         <Tab.Screen
           key={tab.name}
-          name={intl.formatMessage({ id: tab.translationId }) as any}
+          name={tab.name as any}
           component={
             isVerticalLayout ? tab.component : getStackTabScreen(tab.name)
           }
@@ -154,7 +154,7 @@ const TabNavigator = () => {
         <Tab.Navigator
           screenOptions={{
             lazy: true,
-            header: navigationRef.current?.getCurrentRoute()?.name != intl.formatMessage({ id: "form__account" }) ? renderHeader2 : renderHeader,
+            header: navigationRef.current?.getCurrentRoute()?.name != TabRoutes.Home ? renderHeader2 : renderHeader,
             // @ts-expect-error
             foldableList,
           }}
