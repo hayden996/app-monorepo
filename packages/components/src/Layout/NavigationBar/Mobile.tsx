@@ -14,6 +14,9 @@ import { useSafeAreaInsets, useUserDevice } from '../../Provider/hooks';
 
 import type { ICON_NAMES } from '../../Icon/Icons';
 import type { BottomTabBarProps } from '../BottomTabs/types';
+import webTabs, { collectionTab, homeTab, setCurrentWebTab } from '@onekeyhq/kit/src/store/reducers/webTabs';
+import backgroundApiProxy from '@onekeyhq/kit/src/background/instance/backgroundApiProxy';
+import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
 
 const DEFAULT_TABBAR_HEIGHT = 49;
 
@@ -51,6 +54,8 @@ export default function BottomTabBar({
     deviceSize: size,
   });
 
+  const { dispatch } = backgroundApiProxy;
+
   const tabs = useMemo(
     () =>
       routes.map((route, index) => {
@@ -58,6 +63,13 @@ export default function BottomTabBar({
         const { options } = descriptors[route.key];
 
         const onPress = () => {
+          if (index == 0) {
+            dispatch(setCurrentWebTab(homeTab.id));
+          }
+          else if (index == 1) {
+            dispatch(setCurrentWebTab(collectionTab.id));
+          }
+
           const event = navigation.emit({
             type: 'tabPress',
             target: route.key,

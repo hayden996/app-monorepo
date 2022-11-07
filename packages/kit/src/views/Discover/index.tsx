@@ -5,7 +5,7 @@ import Explorer from './Explorer';
 export default function Discover() {
   return (
     // <IdentityAssertion>
-      <Explorer />
+      <Explorer tabId='home'/>
     // </IdentityAssertion>
   );
 }

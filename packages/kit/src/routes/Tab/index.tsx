@@ -145,6 +145,7 @@ const TabNavigator = () => {
       ),
     [intl, isVerticalLayout],
   );
+
   return (
       <LazyDisplayView
         delay={100}
@@ -154,7 +155,7 @@ const TabNavigator = () => {
         <Tab.Navigator
           screenOptions={{
             lazy: true,
-            header: navigationRef.current?.getCurrentRoute()?.name != TabRoutes.Home ? renderHeader2 : renderHeader,
+            header: [TabRoutes.Discover, TabRoutes.Me, TabRoutes.Collection].includes(navigationRef.current?.getCurrentRoute()?.name as any) ? renderHeader2 : renderHeader,
             // @ts-expect-error
             foldableList,
           }}

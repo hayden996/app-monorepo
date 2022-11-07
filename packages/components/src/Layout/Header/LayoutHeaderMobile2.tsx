@@ -10,7 +10,6 @@ import {
 import { tabRoutes } from '@onekeyhq/kit/src/routes/Tab/routes';
 import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
 
-
 export function LayoutHeaderMobile2() {
   const {
     canGoBack,
@@ -21,7 +20,7 @@ export function LayoutHeaderMobile2() {
   const insets = useSafeAreaInsets();
 
   const getTitle = (name: string | undefined) => {
-    debugLogger.common.info("ssssss", navigationRef.current?.getCurrentRoute());
+    if (name == undefined) return "Souffl3";
     const { translationId } = tabRoutes.find(({ name: routeName }) => name === routeName) ?? {};
     return intl.formatMessage({ id: translationId});
   }

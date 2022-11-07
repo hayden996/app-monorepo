@@ -11,7 +11,7 @@ import { copyToClipboard } from '@onekeyhq/components/src/utils/ClipboardUtils';
 import { openUrlExternal } from '@onekeyhq/kit/src/utils/openUrl';
 
 import backgroundApiProxy from '../../../background/instance/backgroundApiProxy';
-import { homeTab, setWebTabData } from '../../../store/reducers/webTabs';
+import { homeTab, setWebTabData, WebTab } from '../../../store/reducers/webTabs';
 
 import Desktop from './Container/Desktop';
 import Mobile from './Container/Mobile';
@@ -24,10 +24,15 @@ import {
   webHandler,
 } from './explorerUtils';
 import MoreView from './MoreMenu';
+import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
 
 const showExplorerBar = webHandler !== 'browser';
 
-const Explorer: FC = () => {
+interface Props {
+  tabId: string
+}
+
+const Explorer: FC<Props> = ({ tabId }) => {
   useDesktopTopDragBarController({
     height: '0px',
   });
@@ -82,11 +87,15 @@ const Explorer: FC = () => {
 
   const explorerContent = useMemo(
     () =>
-      (
-        <Freeze key={`${tabs[0].id}-Freeze`} freeze={!tabs[0].isCurrent}>
-          <WebContent {...tabs[0]} />
+    {
+      const webtab = tabs.find((tab) => (tab.id == tabId)) as any;
+      debugLogger.common.info("tabstab====", webtab, tabs);
+      return (
+        <Freeze key={`${webtab.id}-Freeze`} freeze={!webtab.isCurrent}>
+          <WebContent {...webtab} />
         </Freeze>
-      ),
+      );
+    },
     [tabs],
   );
 

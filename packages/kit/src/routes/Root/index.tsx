@@ -147,34 +147,34 @@ const RootStackNavigator = () => {
    * compare two version number, get the log diff and store new user version code here.
    */
   // settings.version -> process.env.VERSION
-  useEffect(() => {
-    if (hasVersionSet && versionChanged && process.env.VERSION) {
-      const newVersion = process.env.VERSION;
-      if (!platformEnv.isWeb) {
-        appUpdates.getChangeLog(version, newVersion).then((changeLog) => {
-          if (!changeLog) return; // no change log
-          navigation.navigate(RootRoutes.Modal, {
-            screen: ModalRoutes.UpdateFeature,
-            params: {
-              screen: UpdateFeatureModalRoutes.UpdateFeatureModal,
-              params: {
-                changeLog,
-                newVersion,
-              },
-            },
-          });
-        });
-      }
+  // useEffect(() => {
+  //   if (hasVersionSet && versionChanged && process.env.VERSION) {
+  //     const newVersion = process.env.VERSION;
+  //     if (!platformEnv.isWeb) {
+  //       appUpdates.getChangeLog(version, newVersion).then((changeLog) => {
+  //         if (!changeLog) return; // no change log
+  //         navigation.navigate(RootRoutes.Modal, {
+  //           screen: ModalRoutes.UpdateFeature,
+  //           params: {
+  //             screen: UpdateFeatureModalRoutes.UpdateFeatureModal,
+  //             params: {
+  //               changeLog,
+  //               newVersion,
+  //             },
+  //           },
+  //         });
+  //       });
+  //     }
 
-      dispatch(
-        updateVersionAndBuildNumber({
-          version: newVersion,
-          buildNumber: process.env.BUILD_NUMBER,
-        }),
-      );
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, hasVersionSet, versionChanged]);
+  //     dispatch(
+  //       updateVersionAndBuildNumber({
+  //         version: newVersion,
+  //         buildNumber: process.env.BUILD_NUMBER,
+  //       }),
+  //     );
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [dispatch, hasVersionSet, versionChanged]);
 
   useEffect(() => {
     if (platformEnv.isNative) {

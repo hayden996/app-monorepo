@@ -26,19 +26,19 @@ export interface WebTabsInitialState {
 
 export const homeTab: WebTab = {
   id: 'home',
-  url: '',
+  url: 'https://souffl3.com',
   // TODO i18n
-  title: 'Souffl3',
+  title: 'Market',
   isCurrent: true,
   canGoBack: false,
   loading: false,
 };
 export const collectionTab: WebTab = {
   id: 'collection',
-  url: '',
+  url: 'https://souffl3.com/discover',
   // TODO i18n
   title: 'Collection',
-  isCurrent: true,
+  isCurrent: false,
   canGoBack: false,
   loading: false,
 }

@@ -9,6 +9,7 @@ import { WebTab, setWebTabData } from '../../../../store/reducers/webTabs';
 import DiscoverHome from '../../Home';
 import { useWebController } from '../Controller/useWebController';
 import { webHandler, webviewRefs } from '../explorerUtils';
+import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
 
 const WebContent: FC<WebTab> = ({ id, url }) => {
   const [navigationStateChangeEvent, setNavigationStateChangeEvent] =
@@ -35,10 +36,10 @@ const WebContent: FC<WebTab> = ({ id, url }) => {
   );
 
   const webview = useMemo(
-    () => (
-      <WebView
-        src='https://souffl3.com'
-        // src={url || 'about:blank'}
+    () => {
+      return <WebView
+        // src='https://souffl3.com'
+        src={id == "home" ? "https://souffl3.com" : "https://souffl3.com/discover"}
         onWebViewRef={(ref) => {
           const { dispatch } = backgroundApiProxy;
           if (ref && ref.innerRef) {
@@ -52,7 +53,7 @@ const WebContent: FC<WebTab> = ({ id, url }) => {
         onNavigationStateChange={setNavigationStateChangeEvent}
         allowpopups
       />
-    ),
+      },
     [id, url],
   );
 
