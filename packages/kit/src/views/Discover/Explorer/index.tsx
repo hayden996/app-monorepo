@@ -89,7 +89,7 @@ const Explorer: FC<Props> = ({ tabId }) => {
     () =>
     {
       const webtab = tabs.find((tab) => (tab.id == tabId)) as any;
-      debugLogger.common.info("tabstab====", webtab, tabs);
+      // debugLogger.common.info("tabstab====", webtab, tabs);
       return (
         <Freeze key={`${webtab.id}-Freeze`} freeze={!webtab.isCurrent}>
           <WebContent {...webtab} />

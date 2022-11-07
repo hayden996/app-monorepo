@@ -17,6 +17,7 @@ import type { BottomTabBarProps } from '../BottomTabs/types';
 import webTabs, { collectionTab, homeTab, setCurrentWebTab } from '@onekeyhq/kit/src/store/reducers/webTabs';
 import backgroundApiProxy from '@onekeyhq/kit/src/background/instance/backgroundApiProxy';
 import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
+import { TabRoutes } from '@onekeyhq/kit/src/routes/routesEnum';
 
 const DEFAULT_TABBAR_HEIGHT = 49;
 
@@ -63,10 +64,11 @@ export default function BottomTabBar({
         const { options } = descriptors[route.key];
 
         const onPress = () => {
-          if (index == 0) {
+          // debugLogger.common.info("onpresssite", route);
+          if (route.name == TabRoutes.Discover) {
             dispatch(setCurrentWebTab(homeTab.id));
           }
-          else if (index == 1) {
+          else if (route.name == TabRoutes.Collection) {
             dispatch(setCurrentWebTab(collectionTab.id));
           }
 
