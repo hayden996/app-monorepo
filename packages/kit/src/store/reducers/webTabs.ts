@@ -42,8 +42,17 @@ export const collectionTab: WebTab = {
   canGoBack: false,
   loading: false,
 }
+export const profileTab: WebTab = {
+  id: 'profile',
+  url: 'https://souffl3.com/profile',
+  // TODO i18n
+  title: 'Profile',
+  isCurrent: false,
+  canGoBack: false,
+  loading: false,
+}
 const initialState: WebTabsInitialState = {
-  tabs: [homeTab, collectionTab],
+  tabs: [homeTab, collectionTab, profileTab],
   currentTabId: 'home',
   incomingUrl: '',
 };

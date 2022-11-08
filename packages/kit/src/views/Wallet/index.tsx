@@ -31,6 +31,7 @@ import AssetsList from './AssetsList';
 import BackupToast from './BackupToast';
 import NFTList from './NFT/NFTList';
 import { WalletHomeTabEnum } from './type';
+import Explorer from '../Discover/Explorer';
 
 const WalletTabs: FC = () => {
   const intl = useIntl();
@@ -158,11 +159,12 @@ const WalletTabs: FC = () => {
 
 export default function Wallet() {
   return (
-    <>
-      <IdentityAssertion>
-        <WalletTabs />
-      </IdentityAssertion>
-      <OfflineView />
-    </>
+    <Explorer tabId='profile'/>
+    // <>
+    //   <IdentityAssertion>
+    //     <WalletTabs />
+    //   </IdentityAssertion>
+    //   <OfflineView />
+    // </>
   );
 }

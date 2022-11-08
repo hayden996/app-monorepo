@@ -2,7 +2,7 @@
   "expo": {
     "name": "web-embed",
     "slug": "web-embed",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "assetBundlePatterns": ["**/*"],
     "web": {
       "favicon": "./public/static/images/icons/favicon/favicon.png"

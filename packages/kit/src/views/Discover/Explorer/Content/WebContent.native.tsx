@@ -35,11 +35,21 @@ const WebContent: FC<WebTab> = ({ id, url }) => {
     [openMatchDApp],
   );
 
+  const getUrl = (id: 'home' | 'collection' | 'profile') => {
+    const map = {
+      home: "https://souffl3.com",
+      collection: "https://souffl3.com/discover",
+      profile: "https://souffl3.com/profile",
+    }
+
+    return map[id];
+  }
+
   const webview = useMemo(
     () => {
       return <WebView
         // src='https://souffl3.com'
-        src={id == "home" ? "https://souffl3.com" : "https://souffl3.com/discover"}
+        src={getUrl(id as any)}
         onWebViewRef={(ref) => {
           const { dispatch } = backgroundApiProxy;
           if (ref && ref.innerRef) {

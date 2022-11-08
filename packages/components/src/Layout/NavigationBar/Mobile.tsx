@@ -14,7 +14,7 @@ import { useSafeAreaInsets, useUserDevice } from '../../Provider/hooks';
 
 import type { ICON_NAMES } from '../../Icon/Icons';
 import type { BottomTabBarProps } from '../BottomTabs/types';
-import webTabs, { collectionTab, homeTab, setCurrentWebTab } from '@onekeyhq/kit/src/store/reducers/webTabs';
+import webTabs, { collectionTab, homeTab, profileTab, setCurrentWebTab } from '@onekeyhq/kit/src/store/reducers/webTabs';
 import backgroundApiProxy from '@onekeyhq/kit/src/background/instance/backgroundApiProxy';
 import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
 import { TabRoutes } from '@onekeyhq/kit/src/routes/routesEnum';
@@ -70,6 +70,9 @@ export default function BottomTabBar({
           }
           else if (route.name == TabRoutes.Collection) {
             dispatch(setCurrentWebTab(collectionTab.id));
+          }
+          else if (route.name == TabRoutes.Home) {
+            dispatch(setCurrentWebTab(profileTab.id));
           }
 
           const event = navigation.emit({
