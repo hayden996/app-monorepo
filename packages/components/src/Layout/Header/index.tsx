@@ -43,7 +43,7 @@ const Header: FC<HeaderProps> = ({
 
   const PrimaryComponent = (
     <DesktopDragZoneBox>
-      <HStack
+      {/* <HStack
         testID="AppLayoutGlobalNavigationHeader"
         height={`${headerHeight + insets.top}px`}
         pt={`${insets.top}px`}
@@ -51,15 +51,26 @@ const Header: FC<HeaderProps> = ({
         justifyContent={isHorizontal ? 'flex-end' : 'space-between'}
         px={2}
         style={{ backgroundColor: temporaryBg }} // TODO remove this line after add ScrollUp event
+      > */}
+      <Box 
+        flex={isHorizontal ? undefined : "1"}
+        top={insets.top}
+        w="100%"
+        bg="surface-subdued"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="space-between"
+        // height={44+insets.top}
       >
         {headerLeftNode ? (
           <Box
-            flex={isHorizontal ? undefined : 1}
+            flex={isHorizontal ? undefined : "1"}
             justifyContent="center"
             h="full"
-            pl={{ md: 2 }}
-            pr={{ md: 4 }}
+            pl={8}
+            pr={4}
             flexShrink={0}
+            top={4}
           >
             {headerLeftNode}
           </Box>
@@ -70,15 +81,21 @@ const Header: FC<HeaderProps> = ({
         <Typography.Heading>Home</Typography.Heading>
       </HStack>
     )} */}
-        <HStack
-          flex={isHorizontal ? undefined : 1}
+        <Box
+          flex={isHorizontal ? undefined : "1"}
           alignItems="center"
           justifyContent="flex-end"
-          pr={{ md: 6 }}
+          pl={5}
+          pr={0}
+          // right={-10}
+          // flexShrink={0}
+          top={3}
+          style={{height:44}}
         >
           {headerRight()}
-        </HStack>
-      </HStack>
+        </Box>
+      </Box>
+      {/* </HStack> */}
     </DesktopDragZoneBox>
   );
 
