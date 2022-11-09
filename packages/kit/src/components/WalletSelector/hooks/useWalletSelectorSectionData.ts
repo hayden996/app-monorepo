@@ -13,7 +13,7 @@ import {
 } from '@onekeyhq/engine/src/types/wallet';
 import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
 
-import { useRuntime } from '../../../hooks/redux';
+import { useRuntime, useRuntimeFilterWallets } from '../../../hooks/redux';
 
 import { useWalletSelectorStatus } from './useWalletSelectorStatus';
 
@@ -122,7 +122,7 @@ const buildData = debounce(
 
 // TODO move to redux to avoid mount & remount
 export function useWalletSelectorSectionData(): IWalletDataSection[] {
-  const { wallets } = useRuntime();
+  const { wallets } = useRuntimeFilterWallets();
   const [data, setData] = useState<
     { type: EWalletDataSectionType; data: IWalletDataBase[] }[]
   >([]);

@@ -133,14 +133,14 @@ const Welcome = () => {
             flexDirection={{ sm: 'row' }}
             w={{ sm: hasPreviousBackups ? '100%' : '1/2' }}
           >
-            {/* <PressableListItem
+            <PressableListItem
               icon="PlusCircleOutline"
               label={intl.formatMessage({
                 id: 'action__create_wallet',
               })}
               roundedBottom={{ base: 0, sm: 'xl' }}
               onPress={onPressCreateWallet}
-            /> */}
+            />
             <PressableListItem
               icon="SaveOutline"
               label={intl.formatMessage({
@@ -157,7 +157,7 @@ const Welcome = () => {
             w={{ sm: hasPreviousBackups ? '100%' : '1/2' }}
             mt={{ sm: hasPreviousBackups ? 4 : undefined }}
           >
-            <Box flex={1}>
+            {/* <Box flex={1}>
               <PressableListItem
                 icon="ConnectOutline"
                 label={intl.formatMessage({
@@ -190,7 +190,7 @@ const Welcome = () => {
                   {intl.formatMessage({ id: 'content__supported_wallets' })}
                 </Text>
               </Hidden>
-            </Box>
+            </Box> */}
             {hasPreviousBackups ? (
               <PresenceTransition
                 as={Box}

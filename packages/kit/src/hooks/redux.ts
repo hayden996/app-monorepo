@@ -70,6 +70,17 @@ export const useGeneral = () => {
 
 export const useRuntime = () => useAppSelector((s) => s.runtime);
 
+export const useRuntimeFilterWallets = () => {
+  const wallets = useAppSelector((s) => s.runtime.wallets);
+  const filterWallets = useMemo(
+    () => wallets.filter((w) => w.type != WALLET_TYPE_EXTERNAL),
+    [wallets],
+  );
+  return {
+    wallets: filterWallets,
+  };
+};
+
 // TODO rename like useManageNetworks
 export const useRuntimeWallets = () => {
   const wallets = useAppSelector((s) => s.runtime.wallets);
