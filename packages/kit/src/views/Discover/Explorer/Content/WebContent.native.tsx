@@ -40,6 +40,7 @@ const WebContent: FC<WebTab> = ({ id, url }) => {
       home: "https://souffl3.com",
       collection: "https://souffl3.com/discover",
       profile: "https://souffl3.com/profile",
+      launch: "https://souffl3.com/launchpad",
     }
 
     return map[id];

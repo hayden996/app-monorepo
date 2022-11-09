@@ -9,6 +9,7 @@ import AddressBook from '@onekeyhq/kit/src/views/AddressBook/Listing';
 import DevelopScreen from '@onekeyhq/kit/src/views/Developer';
 import DiscoverScreen from '@onekeyhq/kit/src/views/Discover';
 import CollectionScreen from '@onekeyhq/kit/src/views/Collection';
+import LaunchpadScreen from '@onekeyhq/kit/src/views/Launchpad';
 import MarketScreen from '@onekeyhq/kit/src/views/MarketPlace';
 import DAppList from '@onekeyhq/kit/src/views/Discover/DAppList';
 import DiscoverHome from '@onekeyhq/kit/src/views/Discover/Home';
@@ -83,6 +84,18 @@ export const tabRoutes: TabRouteConfig[] = [
     component: CollectionScreen,
     tabBarIcon: () => 'DiscoverOutline',
     translationId: 'title__explore',
+    children: [
+      {
+        name: HomeRoutes.ExploreScreen,
+        component: DiscoverHome,
+      },
+    ],
+  },
+  {
+    name: TabRoutes.Launchpad,
+    component: LaunchpadScreen,
+    tabBarIcon: () => 'LaunchpadOutline',
+    translationId: 'title__launchpad',
     children: [
       {
         name: HomeRoutes.ExploreScreen,

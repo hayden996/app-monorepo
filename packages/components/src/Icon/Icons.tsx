@@ -241,6 +241,7 @@ import TableOutline from "./react/outline/Table";
 import TagOutline from "./react/outline/Tag";
 import TemplateOutline from "./react/outline/Template";
 import DiscoverOutline from "./react/outline/Discover";
+import LaunchpadOutline from "./react/outline/Launchpad";
 import TerminalOutline from "./react/outline/Terminal";
 import ThumbDownOutline from "./react/outline/ThumbDown";
 import ThumbUpOutline from "./react/outline/ThumbUp";
@@ -1060,6 +1061,7 @@ const icons = {
   ZoomOutSolid,
   MarketOutline,
   DiscoverOutline,
+  LaunchpadOutline,
 };
 export type ICON_NAMES = keyof typeof icons;
 export default icons;

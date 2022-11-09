@@ -203,7 +203,7 @@ function MainScreen() {
         <NetworkAccountSelectorEffectsSingleton />
         <WalletSelectorEffectsSingleton />
         {/* TODO Waiting notification component */}
-        <UpdateAlert />
+        {/* <UpdateAlert /> */}
       </Box>
     </RootSiblingParent>
   );

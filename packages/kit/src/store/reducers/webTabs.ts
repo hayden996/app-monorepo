@@ -51,8 +51,17 @@ export const profileTab: WebTab = {
   canGoBack: false,
   loading: false,
 }
+export const LaunchTab: WebTab = {
+  id: 'launch',
+  url: 'https://souffl3.com/launchpad',
+  // TODO i18n
+  title: 'Launchpad',
+  isCurrent: false,
+  canGoBack: false,
+  loading: false,
+}
 const initialState: WebTabsInitialState = {
-  tabs: [homeTab, collectionTab, profileTab],
+  tabs: [homeTab, collectionTab, profileTab, LaunchTab],
   currentTabId: 'home',
   incomingUrl: '',
 };

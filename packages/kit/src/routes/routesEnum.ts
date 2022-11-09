@@ -97,6 +97,7 @@ export enum TabRoutes {
   Send = 'send',
   Receive = 'receive',
   Collection = 'collection',
+  Launchpad = 'launch',
   // Market = 'market',
 }
 

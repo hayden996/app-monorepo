@@ -155,9 +155,8 @@ const TabNavigator = () => {
         <Tab.Navigator
           screenOptions={{
             lazy: true,
-            header: [TabRoutes.Discover, TabRoutes.Me, TabRoutes.Collection].includes(navigationRef.current?.getCurrentRoute()?.name as any) ? renderHeader2 : renderHeader,
-            // @ts-expect-error
-            foldableList,
+            header: [TabRoutes.Discover, TabRoutes.Me, TabRoutes.Collection, TabRoutes.Launchpad].includes(navigationRef.current?.getCurrentRoute()?.name as any) ? renderHeader2 : renderHeader,
+            // foldableList,
           }}
         >
           {tabRoutesList}
