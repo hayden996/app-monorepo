@@ -11,8 +11,8 @@ const TermsOfService: FC = () => {
   const intl = useIntl();
   const insets = useSafeAreaInsets();
 
-  const userAgreementUrl = useHelpLink({ path: 'articles/360002014776' });
-  const privacyPolicyUrl = useHelpLink({ path: 'articles/360002003315' });
+  const userAgreementUrl = "https://souffl3.com/documents/privacy_policy.pdf";//useHelpLink({ path: 'articles/360002014776' });
+  const privacyPolicyUrl = "https://souffl3.com/documents/privacy_policy.pdf";//useHelpLink({ path: 'articles/360002003315' });
 
   const onOpenUserAgreement = useCallback(() => {
     openUrl(

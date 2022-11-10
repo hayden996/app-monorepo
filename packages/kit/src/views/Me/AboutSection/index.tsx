@@ -34,8 +34,8 @@ export const AboutSection = () => {
   const { dispatch } = backgroundApiProxy;
   const { themeVariant } = useTheme();
 
-  const userAgreementUrl = useHelpLink({ path: 'articles/360002014776' });
-  const privacyPolicyUrl = useHelpLink({ path: 'articles/360002003315' });
+  const userAgreementUrl = "https://souffl3.com/documents/privacy_policy.pdf";//useHelpLink({ path: 'articles/360002014776' });
+  const privacyPolicyUrl = "https://souffl3.com/documents/privacy_policy.pdf";//useHelpLink({ path: 'articles/360002003315' });
   const settings = useSettings();
 
   let lastTime: Date | undefined;
@@ -168,7 +168,7 @@ export const AboutSection = () => {
             <Icon name="ChevronRightSolid" size={20} />
           </Box>
         </Pressable> */}
-        {/* <Pressable
+        <Pressable
           display="flex"
           flexDirection="row"
           alignItems="center"
@@ -198,7 +198,7 @@ export const AboutSection = () => {
           <Box>
             <Icon name="ChevronRightSolid" size={20} />
           </Box>
-        </Pressable> */}
+        </Pressable>
         {/* <Pressable
           display="flex"
           flexDirection="row"

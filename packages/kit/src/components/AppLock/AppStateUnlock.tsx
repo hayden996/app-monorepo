@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
 import { useIntl } from 'react-intl';
-import { Keyboard } from 'react-native';
+import { Keyboard, Image } from 'react-native';
 
 import {
   Box,
@@ -22,6 +22,7 @@ import backgroundApiProxy from '../../background/instance/backgroundApiProxy';
 import { wait } from '../../utils/helper';
 import { showSplashScreen } from '../../views/Overlay/showSplashScreen';
 import LocalAuthenticationButton from '../LocalAuthenticationButton';
+import logo from '@onekeyhq/kit/assets/logo.png';
 
 const ForgetPasswordButton = () => {
   const intl = useIntl();
@@ -139,8 +140,8 @@ export const AppStateUnlock = () => {
         >
           <Box width="full" py={py}>
             <Box display="flex" flexDirection="column" alignItems="center">
-              <Icon name="BrandLogoIllus" size={50} />
-              <Typography.DisplayXLarge my="2">OneKey</Typography.DisplayXLarge>
+              <Image source={logo} style={{width:50, height:50}} />
+              <Typography.DisplayXLarge my="2">Souffl3</Typography.DisplayXLarge>
               <Typography.Body1 color="text-subdued">
                 {intl.formatMessage({
                   id: 'content__the_decentralized_web_awaits',
