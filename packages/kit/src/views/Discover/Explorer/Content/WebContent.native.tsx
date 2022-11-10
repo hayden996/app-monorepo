@@ -11,6 +11,17 @@ import { useWebController } from '../Controller/useWebController';
 import { webHandler, webviewRefs } from '../explorerUtils';
 import debugLogger from '@onekeyhq/shared/src/logger/debugLogger';
 
+export const getUrl = (id: 'home' | 'collection' | 'profile') => {
+  const map = {
+    home: "https://souffl3.com",
+    collection: "https://souffl3.com/discover",
+    profile: "https://souffl3.com/profile",
+    launch: "https://souffl3.com/launchpad",
+  }
+
+  return map[id];
+}
+
 const WebContent: FC<WebTab> = ({ id, url }) => {
   const [navigationStateChangeEvent, setNavigationStateChangeEvent] =
     useState<WebViewNavigation>();
@@ -34,17 +45,6 @@ const WebContent: FC<WebTab> = ({ id, url }) => {
     ),
     [openMatchDApp],
   );
-
-  const getUrl = (id: 'home' | 'collection' | 'profile') => {
-    const map = {
-      home: "https://souffl3.com",
-      collection: "https://souffl3.com/discover",
-      profile: "https://souffl3.com/profile",
-      launch: "https://souffl3.com/launchpad",
-    }
-
-    return map[id];
-  }
 
   const webview = useMemo(
     () => {
