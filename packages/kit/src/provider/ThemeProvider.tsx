@@ -14,7 +14,7 @@ export function useThemeProviderVariant() {
   const systemLocale = useSystemLocale();
   const colorScheme = useColorScheme();
 
-  const themeVariant = theme === 'system' ? colorScheme ?? 'dark' : theme;
+  const themeVariant = theme === 'system' ? 'dark' : theme;
   const localeVariant = locale === 'system' ? systemLocale : locale;
   return {
     themeVariant,

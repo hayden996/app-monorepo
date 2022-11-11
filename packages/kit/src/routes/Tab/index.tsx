@@ -146,6 +146,10 @@ const TabNavigator = () => {
     [intl, isVerticalLayout],
   );
 
+  const getHeader2 = isVerticalLayout 
+    ? [TabRoutes.Discover, TabRoutes.Me, TabRoutes.Collection, TabRoutes.Launchpad]
+    : [TabRoutes.Discover, TabRoutes.Me, TabRoutes.Collection, TabRoutes.Launchpad, TabRoutes.Home];
+
   return (
       <LazyDisplayView
         delay={100}
@@ -155,7 +159,7 @@ const TabNavigator = () => {
         <Tab.Navigator
           screenOptions={{
             lazy: true,
-            header: [TabRoutes.Discover, TabRoutes.Me, TabRoutes.Collection, TabRoutes.Launchpad].includes(navigationRef.current?.getCurrentRoute()?.name as any) ? renderHeader2 : renderHeader,
+            header: getHeader2.includes(navigationRef.current?.getCurrentRoute()?.name as any) ? renderHeader2 : renderHeader,
             // foldableList,
           }}
         >
