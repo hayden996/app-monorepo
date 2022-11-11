@@ -272,7 +272,7 @@ function WalletItemSelectDropdown({
     // hd wallet options
     return [
       allOptions.rename,
-      allOptions.backup,
+      // allOptions.backup,
       // allOptions.restore,
       allOptions.remove,
     ];

@@ -135,7 +135,7 @@ const TabNavigator = () => {
           key={tab.name}
           name={tab.name as any}
           component={
-            isVerticalLayout ? tab.component : getStackTabScreen(tab.name)
+            isVerticalLayout ? tab.component : tab.component//getStackTabScreen(tab.name)
           }
           options={{
             tabBarIcon: tab.tabBarIcon,

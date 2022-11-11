@@ -17,6 +17,9 @@ import VStack from '../../VStack';
 
 import type { ICON_NAMES } from '../../Icon';
 import type { BottomTabBarProps } from '../BottomTabs';
+import backgroundApiProxy from '@onekeyhq/kit/src/background/instance/backgroundApiProxy';
+import { TabRoutes } from '@onekeyhq/kit/src/routes/routesEnum';
+import { collectionTab, homeTab, launchTab, profileTab, setCurrentWebTab } from '@onekeyhq/kit/src/store/reducers/webTabs';
 
 const Sidebar: FC<BottomTabBarProps> = ({
   navigation,
@@ -32,6 +35,8 @@ const Sidebar: FC<BottomTabBarProps> = ({
     'text-disabled',
   ]);
 
+  const { dispatch } = backgroundApiProxy;
+
   const tabs = useMemo(
     () =>
       routes.map((route, index) => {
@@ -39,6 +44,19 @@ const Sidebar: FC<BottomTabBarProps> = ({
         const { options } = descriptors[route.key];
 
         const onPress = () => {
+          if (route.name == TabRoutes.Discover) {
+            dispatch(setCurrentWebTab(homeTab.id));
+          }
+          else if (route.name == TabRoutes.Collection) {
+            dispatch(setCurrentWebTab(collectionTab.id));
+          }
+          else if (route.name == TabRoutes.Home) {
+            dispatch(setCurrentWebTab(profileTab.id));
+          }
+          else if (route.name == TabRoutes.Launchpad) {
+            dispatch(setCurrentWebTab(launchTab.id));
+          }
+
           const event = navigation.emit({
             type: 'tabPress',
             target: route.key,

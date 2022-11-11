@@ -160,7 +160,7 @@ const Explorer: FC<Props> = ({ tabId }) => {
     visibleMore,
   ]);
 
-  const Container = isVerticalLayout ? Mobile : Desktop;
+  const Container = Mobile;//isVerticalLayout ? Mobile : Desktop;
   return (
     <Box flex={1} bg="background-default">
       <Container
