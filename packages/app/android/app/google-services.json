@@ -1,47 +1,47 @@
 {
-    "project_info": {
-      "project_number": "1",
-      "firebase_url": "https://onekey-uni.firebaseio.com",
-      "project_id": "onekey-uni",
-      "storage_bucket": "onekey-uni.appspot.com"
-    },
-    "client": [
-      {
-        "client_info": {
-          "mobilesdk_app_id": "1:example",
-          "android_client_info": {
-            "package_name": "so.onekey.app.wallet"
-          }
-        },
-        "oauth_client": [
-          {
-            "client_id": "example.apps.googleusercontent.com",
-            "client_type": 3
-          }
-        ],
-        "api_key": [
-          {
-            "current_key": "AI-examplew"
-          }
-        ],
-        "services": {
-          "appinvite_service": {
-            "other_platform_oauth_client": [
-              {
-                "client_id": "example.apps.googleusercontent.com",
-                "client_type": 3
-              },
-              {
-                "client_id": "example.apps.googleusercontent.com",
-                "client_type": 2,
-                "ios_info": {
-                  "bundle_id": "com.onekey.testflight"
-                }
+  "project_info": {
+    "project_number": "1086319428698",
+    "firebase_url": "https://souffl3-nft-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "souffl3-nft",
+    "storage_bucket": "souffl3-nft.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086319428698:android:53aa9d1c7c1fc61fc78463",
+        "android_client_info": {
+          "package_name": "com.enjoy.souffl3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086319428698-k92ojejpi8i0t0p7dv0gcb2ps93bkts6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwvrYqHX-vU_6q-uEKeYUc4pwZSoSp2uY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086319428698-k92ojejpi8i0t0p7dv0gcb2ps93bkts6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1086319428698-57hlvnqu51n6dlicflss9cadarrnjq1n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.3njoy.souffl3"
               }
-            ]
-          }
+            }
+          ]
         }
       }
-    ],
-    "configuration_version": "1"
-  }
+    }
+  ],
+  "configuration_version": "1"
+}
