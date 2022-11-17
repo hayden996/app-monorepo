@@ -83,7 +83,7 @@ const Welcome = () => {
 
   const onPressCreateWallet = useCallback(() => {
     backgroundApiProxy.dispatch(setOnBoardingLoadingBehindModal(false));
-    navigation.navigate(EOnboardingRoutes.SetPassword);
+    navigation.navigate(EOnboardingRoutes.RecoveryPhrase);
   }, [navigation]);
   const onPressImportWallet = useCallback(() => {
     backgroundApiProxy.dispatch(setOnBoardingLoadingBehindModal(false));

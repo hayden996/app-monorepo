@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { useNavigation } from '@react-navigation/core';
 import { RouteProp, useRoute } from '@react-navigation/native';
@@ -12,6 +12,7 @@ import { EOnboardingRoutes } from '../../../routes/enums';
 import { IOnboardingRoutesParams } from '../../../routes/types';
 
 import SecondaryContent from './SecondaryContent';
+import backgroundApiProxy from '../../../../../background/instance/backgroundApiProxy';
 
 type NavigationProps = StackNavigationProp<
   IOnboardingRoutesParams,
@@ -44,14 +45,41 @@ const RecoveryPhrase = () => {
   const intl = useIntl();
   const navigation = useNavigation<NavigationProps>();
   const route = useRoute<RouteProps>();
-  const { mnemonic } = route.params;
+  const importedMnemonic = route.params?.mnemonic;
+  const [mnemonic, setMnemonic] = useState('');
 
   const onPressShowPhraseButton = useCallback(() => {
-    navigation.replace(EOnboardingRoutes.ShowRecoveryPhrase, route.params);
-  }, [navigation, route.params]);
+    
+    navigation.replace(EOnboardingRoutes.ShowRecoveryPhrase,  {
+      password: 'defaultpwd',
+      mnemonic: mnemonic, 
+      withEnableAuthentication: false,
+    });
+  }, [navigation, mnemonic]);
   const onPressSavedPhrase = useCallback(() => {
-    navigation.replace(EOnboardingRoutes.BehindTheScene, route.params);
-  }, [navigation, route.params]);
+    navigation.replace(EOnboardingRoutes.BehindTheScene, {
+      password: 'defaultpwd',
+      mnemonic: mnemonic, 
+      withEnableAuthentication: false,
+    });
+  }, [navigation, mnemonic]);
+
+  const fn = useCallback(async () => {
+    const res = await backgroundApiProxy.engine.generateMnemonic();
+    setMnemonic(res);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+  useEffect(() => {
+    
+    if(importedMnemonic) {
+      setMnemonic(importedMnemonic);
+      return;
+    };
+    fn();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [importedMnemonic]);
+
 
   const lists = useMemo(
     () =>

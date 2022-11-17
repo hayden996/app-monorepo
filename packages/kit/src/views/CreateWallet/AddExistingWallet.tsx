@@ -467,10 +467,18 @@ function OnboardingAddExistingWallet() {
       );
       // forceVisibleUnfocused?.();
       navigation.navigate(RootRoutes.Onboarding, {
-        screen: EOnboardingRoutes.SetPassword,
+        screen: EOnboardingRoutes.BehindTheScene,
         params: {
-          mnemonic: p.mnemonic,
+          password: 'defaultpwd',
+          mnemonic: p.mnemonic ?? '',
+          // isHardwareCreating: {
+          //   device,
+          //   features,
+          // },
         },
+        // params: {
+        //   mnemonic: p.mnemonic,
+        // },
       });
     },
     [navigation],

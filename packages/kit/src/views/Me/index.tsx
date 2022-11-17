@@ -25,7 +25,7 @@ export const Me = () => {
           {/* <UtilSection />
           <DefaultSection /> */}
           <GenaralSection />
-          <SecuritySection />
+          {/* <SecuritySection /> */}
           {/* <PushSection /> */}
           <AboutSection />
           {/* <FooterAction /> */}

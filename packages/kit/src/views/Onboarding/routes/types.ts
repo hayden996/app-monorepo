@@ -27,7 +27,7 @@ export type IOnboardingRoutesParams = {
   [EOnboardingRoutes.ImportWallet]: undefined;
 
   [EOnboardingRoutes.SetPassword]: IOnboardingSetPasswordParams | undefined;
-  [EOnboardingRoutes.RecoveryPhrase]: IOnboardingRecoveryPhraseParams;
+  [EOnboardingRoutes.RecoveryPhrase]: IOnboardingSetPasswordParams | undefined;
   [EOnboardingRoutes.ShowRecoveryPhrase]: IOnboardingRecoveryPhraseParams;
   [EOnboardingRoutes.BehindTheScene]: IOnboardingBehindTheSceneParams;
 

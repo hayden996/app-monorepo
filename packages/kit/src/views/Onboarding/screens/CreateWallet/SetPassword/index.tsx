@@ -49,13 +49,12 @@ function RedirectToRecoveryPhrase({
       } else {
         const mnemonic = await backgroundApiProxy.engine.generateMnemonic();
 
-        // return;
-
-        navigation.replace(EOnboardingRoutes.RecoveryPhrase, {
-          password,
-          mnemonic,
-          withEnableAuthentication,
-        });
+        return;
+        // navigation.replace(EOnboardingRoutes.RecoveryPhrase, {
+        //   password,
+        //   mnemonic,
+        //   withEnableAuthentication,
+        // });
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
