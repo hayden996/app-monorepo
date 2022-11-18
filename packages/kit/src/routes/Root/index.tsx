@@ -198,9 +198,9 @@ const RootStackNavigator = () => {
   }, [dispatch]);
 
   return (
-    <AppLock>
+    // <AppLock>
       <App />
-    </AppLock>
+    // </AppLock>
   );
 };
 

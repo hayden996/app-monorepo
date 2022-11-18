@@ -1,7 +1,7 @@
 {
   "name": "@onekeyhq/app",
   "main": "__generated__/AppEntry.js",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "ANDROID_CHANNEL=direct expo run:android",
